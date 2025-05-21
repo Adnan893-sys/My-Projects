@@ -1,0 +1,62 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Debug/Adc pot.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Adc pot.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Adc pot.map</FILE>
+  <FILE>Adc pot.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <H2><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>42</LINE></H2>
+  <H3><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>43</LINE></H3>
+  <Show_initials><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>325</LINE></Show_initials>
+  <Read_ADC><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>55</LINE></Read_ADC>
+  <Keep_polling><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>59</LINE></Keep_polling>
+  <start><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>74</LINE></start>
+  <go_check><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>82</LINE></go_check>
+  <next><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>86</LINE></next>
+  <Check2><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>273</LINE></Check2>
+  <Check3><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>291</LINE></Check3>
+  <next1><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>98</LINE></next1>
+  <L1><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>105</LINE></L1>
+  <do_addition><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>128</LINE></do_addition>
+  <L2><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>112</LINE></L2>
+  <L3><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>119</LINE></L3>
+  <move_next><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>137</LINE></move_next>
+  <X1><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>149</LINE></X1>
+  <division><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>157</LINE></division>
+  <end><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>165</LINE></end>
+  <show><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>207</LINE></show>
+  <FDelay><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>311</LINE></FDelay>
+  <G1><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>213</LINE></G1>
+  <finish><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>266</LINE></finish>
+  <G2><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>219</LINE></G2>
+  <G3><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>225</LINE></G3>
+  <G4><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>231</LINE></G4>
+  <G5><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>237</LINE></G5>
+  <G6><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>243</LINE></G6>
+  <G7><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>249</LINE></G7>
+  <G8><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>255</LINE></G8>
+  <G9><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>261</LINE></G9>
+  <do_Add2><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>279</LINE></do_Add2>
+  <exit2><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>284</LINE></exit2>
+  <do_Add3><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>298</LINE></do_Add3>
+  <exit3><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>304</LINE></exit3>
+  <T2><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>314</LINE></T2>
+  <T3><FILE>C:\Users\GH2\Desktop\re projects1\ready 2\Adc pot\Adc pot\Adc pot.asm</FILE><LINE>315</LINE></T3>
+ </LABELS>
+</ASSEMBLER_INFO>
