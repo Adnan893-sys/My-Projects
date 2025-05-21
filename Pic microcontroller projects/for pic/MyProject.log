@@ -1,0 +1,9 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F1937 -DL -O11111114 -fo32 -N"C:\Users\Zulfiqar\Desktop\my work done\PIC\for pic\MyProject.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16_Enh\" -SP"C:\Users\Zulfiqar\Desktop\my work done\PIC\for pic\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16_Enh\" "MyProject.c" "lcd_lib.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+hint: 0	1139	Available RAM: 508 [bytes], Available ROM: 8192 [bytes]	 
+diagnostics: 0	122	Compilation Started	lcd_lib.h
+diagnostics: 11	123	Compiled Successfully	MyProject.c
+diagnostics: 0	122	Compilation Started	lcd_lib.h
+error: 40	393	'LCD_Init' Identifier redefined	lcd_lib.c
+hint: 77	1163	Variable 'n2_1' has been declared, but not used	lcd_lib.c
+hint: 77	1163	Variable 'n3_1' has been declared, but not used	lcd_lib.c
+error: 0	102	Finished (with errors): 21 Nov 2021, 11:28:53	MyProject.mcppi
