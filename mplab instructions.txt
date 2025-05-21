@@ -1,0 +1,8 @@
+goto
+programfiles(x86)-------microchip-----mpasm suite----templete-----object------select asm for controller-----after adding change it to C----double click and change name(with asm)
+
+programfiles(x86)-------microchip-----mpasm suite----LKR-----select linker----------also change it to c
+
+
+
+
