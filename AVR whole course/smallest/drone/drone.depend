@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1659785313 source:c:\users\gh2\desktop\drone project\drone\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<math.h>
+
