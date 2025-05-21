@@ -1,0 +1,6 @@
+[PROJECTS]
+Count=2
+Project0=..\microc\yes.mcppi
+Project1=abc.mcppi
+[ActiveProject]
+Index=1
