@@ -1,0 +1,81 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+Add_10MINT	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	342;"	l	line:342
+Add_10SEC	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	306;"	l	line:306
+Add_1MINT	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	324;"	l	line:324
+Again	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	378;"	l	line:378
+Again1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	419;"	l	line:419
+BSR_TEMP	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	57;"	v	line:57
+Change	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	285;"	l	line:285
+Change1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	266;"	l	line:266
+Change2	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	240;"	l	line:240
+Check	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	151;"	q	line:151
+Check1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	152;"	q	line:152
+Check2	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	153;"	q	line:153
+Check3	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	154;"	q	line:154
+Copy	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	136;"	q	line:136
+Copy1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	137;"	q	line:137
+Count	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	140;"	q	line:140
+Count1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	142;"	q	line:142
+Count2	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	143;"	q	line:143
+Count3	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	144;"	q	line:144
+Count4	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	145;"	q	line:145
+County	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	141;"	q	line:141
+DATA_EEPROM	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	67;"	l	line:67
+Delay_10mint	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	402;"	l	line:402
+Delay_10s	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	386;"	l	line:386
+Delay_1mint	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	394;"	l	line:394
+Delay_1s	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	367;"	l	line:367
+Delay_200ms	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	410;"	l	line:410
+EXAMPLE	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	61;"	v	line:61
+G1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	218;"	l	line:218
+HI_INT_VECTOR	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	84;"	l	line:84
+HighInt	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	103;"	l	line:103
+L1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	290;"	l	line:290
+LOW_INT_VECTOR	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	93;"	l	line:93
+Limit	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	146;"	q	line:146
+Limit1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	147;"	q	line:147
+Limit2	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	148;"	q	line:148
+Limit3	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	155;"	q	line:155
+Limit4	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	156;"	q	line:156
+LowInt	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	115;"	l	line:115
+MOVLF	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	186;"	m	line:186
+Main	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	138;"	l	line:138
+NUM	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	158;"	q	line:158
+P3	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	134;"	q	line:134
+PWR_SET	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	359;"	l	line:359
+Q3	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	135;"	q	line:135
+R1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	131;"	q	line:131
+R2	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	132;"	q	line:132
+R3	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	133;"	q	line:133
+RE	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	372;"	l	line:372
+RESET_VECTOR	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	75;"	l	line:75
+SEND	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	180;"	m	line:180
+STATUS_TEMP	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	56;"	v	line:56
+UP	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	397;"	l	line:397
+UP1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	405;"	l	line:405
+UP2	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	389;"	l	line:389
+WREG_TEMP	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	55;"	v	line:55
+back	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	274;"	l	line:274
+back1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	250;"	l	line:250
+bra	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	270;"	v	line:270
+comp	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	149;"	q	line:149
+comp1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	150;"	q	line:150
+disp	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	296;"	l	line:296
+do	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	272;"	l	line:272
+exit	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	300;"	l	line:300
+go	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	258;"	l	line:258
+h1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	209;"	l	line:209
+here	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	360;"	l	line:360
+one_time	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	279;"	l	line:279
+rem	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	238;"	l	line:238
+ze	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	248;"	l	line:248
+zero	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	318;"	l	line:318
+zero1	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	353;"	l	line:353
+zero2	C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm	336;"	l	line:336

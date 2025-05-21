@@ -1,0 +1,123 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Sun May 16 13:46:12 2021
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+             RESET_VECTOR       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+            HI_INT_VECTOR       code   0x000008    program   0x000002
+           LOW_INT_VECTOR       code   0x000018    program   0x000002
+                    .code       code   0x00001a    program   0x0001d2
+   .config_300001_OVEN1.O    romdata   0x300001    program   0x000001
+              DATA_EEPROM       code   0xf00000    program   0x000010
+               .udata_acs      udata   0x000000       data   0x000001
+                   .udata      udata   0x000f00       data   0x000003
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x000008    0x000009      
+                            0x000018    0x0001eb      
+                            0x300001    0x300001      
+                            0xf00000    0xf0000f      
+            493 out of 132120 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+               Add_10MINT   0x000162    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                Add_10SEC   0x000122    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                Add_1MINT   0x000142    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                    Again   0x00019e    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                   Again1   0x0001e4    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                   Change   0x0000fc    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                  Change1   0x0000da    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                  Change2   0x0000a8    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+             Delay_10mint   0x0001c6    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                Delay_10s   0x0001aa    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+              Delay_1mint   0x0001b8    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                 Delay_1s   0x00018a    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+              Delay_200ms   0x0001d4    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       G1   0x000080    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                  HighInt   0x00001a    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       L1   0x000104    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                   LowInt   0x00001c    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     Main   0x000036    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                  PWR_SET   0x000180    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       RE   0x000192    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       UP   0x0001bc    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                      UP1   0x0001ca    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                      UP2   0x0001ae    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     back   0x0000e6    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                    back1   0x0000b8    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     disp   0x000110    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       do   0x0000e4    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     exit   0x000118    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       go   0x0000cc    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       h1   0x00006e    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     here   0x000180    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                 one_time   0x0000f2    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                      rem   0x0000a6    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       ze   0x0000b6    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     zero   0x00013a    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                    zero1   0x000178    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                    zero2   0x00015a    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                 BSR_TEMP   0x000f02       data     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                  EXAMPLE   0x000000       data     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+              STATUS_TEMP   0x000f01       data     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                WREG_TEMP   0x000f00       data     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  HighInt   0x00001a    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                   LowInt   0x00001c    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     Main   0x000036    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       h1   0x00006e    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       G1   0x000080    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                      rem   0x0000a6    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                  Change2   0x0000a8    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       ze   0x0000b6    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                    back1   0x0000b8    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       go   0x0000cc    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                  Change1   0x0000da    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       do   0x0000e4    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     back   0x0000e6    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                 one_time   0x0000f2    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                   Change   0x0000fc    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       L1   0x000104    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     disp   0x000110    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     exit   0x000118    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                Add_10SEC   0x000122    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     zero   0x00013a    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                Add_1MINT   0x000142    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                    zero2   0x00015a    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+               Add_10MINT   0x000162    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                    zero1   0x000178    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                  PWR_SET   0x000180    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                     here   0x000180    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                 Delay_1s   0x00018a    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       RE   0x000192    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                    Again   0x00019e    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                Delay_10s   0x0001aa    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                      UP2   0x0001ae    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+              Delay_1mint   0x0001b8    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                       UP   0x0001bc    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+             Delay_10mint   0x0001c6    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                      UP1   0x0001ca    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+              Delay_200ms   0x0001d4    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                   Again1   0x0001e4    program     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                  EXAMPLE   0x000000       data     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                WREG_TEMP   0x000f00       data     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+              STATUS_TEMP   0x000f01       data     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+                 BSR_TEMP   0x000f02       data     static C:\Users\Zulfiqar\Desktop\project\2nd\oven1.asm
+
+

@@ -1,0 +1,23 @@
+* C:\Users\Zulfiqar\Desktop\thermister.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Jan 04 01:27:16 2022
+
+
+
+** Analysis setup **
+.tran 0ms 6s 0 6ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "thermister.net"
+.INC "thermister.als"
+
+
+.probe
+
+
+.END

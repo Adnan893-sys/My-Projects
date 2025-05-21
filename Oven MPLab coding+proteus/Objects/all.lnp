@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\trans.obj" 
+TO ".\Objects\all" 
+PRINT(".\Listings\all.m51")

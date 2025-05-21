@@ -1,0 +1,233 @@
+
+**** 12/12/21 22:03:08 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Zulfiqar\Desktop\supply\Schematic2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Dec 12 22:03:08 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic2.net"
+
+**** INCLUDING Schematic2.net ****
+* Schematics Netlist *
+
+
+
+V_V1         12V 0 12V
+V_V2         -12V 0 -12V
+V_V3         6V 0 6V
+R_R5         $N_0001 6V  100  
+R_R4         0 $N_0001  100  
+R_R2         $N_0002 6V  100  
+R_R6         $N_0004 $N_0003  10k  
+X_U1         $N_0001 $N_0004 12V -12V $N_0003 uA741
+X_U2         $N_0002 $N_0007 12V -12V $N_0008 uA741
+R_R8         $N_0008 $N_0007  10k  
+R_R7         $N_0007 $N_0004  1.7550k  
+R_R9         $N_0003 $N_0011  10k  
+R_R10         $N_0011 $N_0012  10k  
+R_R11         0 $N_0013  10k  
+X_U3         $N_0013 $N_0011 12V -12V $N_0012 uA741
+R_R12         $N_0008 $N_0013  10k  
+R_R13         $N_0017 $N_0016  820  
+R_R14         $N_0016 $N_0018  820  
+R_R16         $N_0020 $N_0019  1k  
+D_D1         $N_0019 0 Dbreak 
+D_D2         $N_0021 0 Dbreak 
+D_D3         $N_0022 0 Dbreak 
+D_D4         $N_0023 0 Dbreak 
+R_R17         $N_0024 $N_0023  1k  
+R_R18         $N_0025 $N_0021  1k  
+R_R19         $N_0026 $N_0022  1k  
+R_R21         $N_0018 6V  270  
+V_V4         Vin 0 6.002V
+R_R23         $N_0028 $N_0027  820  
+R_R24         $N_0027 $N_0029  820  
+R_R25         $N_0031 $N_0030  1k  
+R_R26         $N_0033 $N_0032  1k  
+R_R27         $N_0035 $N_0034  1k  
+R_R28         $N_0037 $N_0036  1k  
+X_U8A         $N_0038 $N_0029 6V 0 $N_0035 LM324
+X_U9A         $N_0038 $N_0028 6V 0 $N_0031 LM324
+X_U10A         $N_0038 $N_0027 6V 0 $N_0033 LM324
+V_V5         Vin 0 6.002V
+R_R30         $N_0028 0  2.7k  
+D_D5         $N_0036 0 Dbreak 
+D_D6         $N_0030 0 Dbreak 
+D_D7         $N_0032 0 Dbreak 
+D_D8         $N_0034 0 Dbreak 
+R_R22         $N_0029 6V  820  
+X_U11A         $N_0038 6V 6V 0 $N_0037 LM324
+R_R15         6V $N_0017  820  
+X_U5A         $N_0012 $N_0018 6V 0 $N_0020 LM324
+X_U4A         $N_0012 $N_0016 6V 0 $N_0024 LM324
+X_U7A         $N_0012 $N_0017 6V 0 $N_0026 LM324
+X_U6A         $N_0012 6V 12V 0 $N_0025 LM324
+R_R3         0 $N_0002  138.5  
+
+**** RESUMING Schematic2.cir ****
+.INC "Schematic2.als"
+
+
+
+**** INCLUDING Schematic2.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=12V -=0 )
+V_V2            V2(+=-12V -=0 )
+V_V3            V3(+=6V -=0 )
+R_R5            R5(1=$N_0001 2=6V )
+R_R4            R4(1=0 2=$N_0001 )
+R_R2            R2(1=$N_0002 2=6V )
+R_R6            R6(1=$N_0004 2=$N_0003 )
+X_U1            U1(+=$N_0001 -=$N_0004 V+=12V V-=-12V OUT=$N_0003 )
+X_U2            U2(+=$N_0002 -=$N_0007 V+=12V V-=-12V OUT=$N_0008 )
+R_R8            R8(1=$N_0008 2=$N_0007 )
+R_R7            R7(1=$N_0007 2=$N_0004 )
+R_R9            R9(1=$N_0003 2=$N_0011 )
+R_R10           R10(1=$N_0011 2=$N_0012 )
+R_R11           R11(1=0 2=$N_0013 )
+X_U3            U3(+=$N_0013 -=$N_0011 V+=12V V-=-12V OUT=$N_0012 )
+R_R12           R12(1=$N_0008 2=$N_0013 )
+R_R13           R13(1=$N_0017 2=$N_0016 )
+R_R14           R14(1=$N_0016 2=$N_0018 )
+R_R16           R16(1=$N_0020 2=$N_0019 )
+D_D1            D1(1=$N_0019 2=0 )
+D_D2            D2(1=$N_0021 2=0 )
+D_D3            D3(1=$N_0022 2=0 )
+D_D4            D4(1=$N_0023 2=0 )
+R_R17           R17(1=$N_0024 2=$N_0023 )
+R_R18           R18(1=$N_0025 2=$N_0021 )
+R_R19           R19(1=$N_0026 2=$N_0022 )
+R_R21           R21(1=$N_0018 2=6V )
+V_V4            V4(+=Vin -=0 )
+R_R23           R23(1=$N_0028 2=$N_0027 )
+R_R24           R24(1=$N_0027 2=$N_0029 )
+R_R25           R25(1=$N_0031 2=$N_0030 )
+R_R26           R26(1=$N_0033 2=$N_0032 )
+R_R27           R27(1=$N_0035 2=$N_0034 )
+R_R28           R28(1=$N_0037 2=$N_0036 )
+X_U8A           U8A(+=$N_0038 -=$N_0029 V+=6V V-=0 OUT=$N_0035 )
+X_U9A           U9A(+=$N_0038 -=$N_0028 V+=6V V-=0 OUT=$N_0031 )
+X_U10A          U10A(+=$N_0038 -=$N_0027 V+=6V V-=0 OUT=$N_0033 )
+V_V5            V5(+=Vin -=0 )
+R_R30           R30(1=$N_0028 2=0 )
+D_D5            D5(1=$N_0036 2=0 )
+D_D6            D6(1=$N_0030 2=0 )
+D_D7            D7(1=$N_0032 2=0 )
+D_D8            D8(1=$N_0034 2=0 )
+R_R22           R22(1=$N_0029 2=6V )
+X_U11A          U11A(+=$N_0038 -=6V V+=6V V-=0 OUT=$N_0037 )
+R_R15           R15(1=6V 2=$N_0017 )
+X_U5A           U5A(+=$N_0012 -=$N_0018 V+=6V V-=0 OUT=$N_0020 )
+X_U4A           U4A(+=$N_0012 -=$N_0016 V+=6V V-=0 OUT=$N_0024 )
+X_U7A           U7A(+=$N_0012 -=$N_0017 V+=6V V-=0 OUT=$N_0026 )
+X_U6A           U6A(+=$N_0012 -=6V V+=12V V-=0 OUT=$N_0025 )
+R_R3            R3(1=0 2=$N_0002 )
+_    _(-12V=-12V)
+_    _(Vin=Vin)
+_    _(6V=6V)
+_    _(12V=12V)
+.ENDALIASES
+
+
+**** RESUMING Schematic2.cir ****
+.probe
+
+
+.END
+
+
+**** EXPANSION OF SUBCIRCUIT X_U2 ****
+X_U2.c1 X_U2.11 X_U2.12 8.661E-12
+X_U2.c2 X_U2.6 X_U2.7 30.00E-12
+X_U2.dc $N_0008 X_U2.53 X_U2.dx
+X_U2.de X_U2.54 $N_0008 X_U2.dx
+X_U2.dlp X_U2.90 X_U2.91 X_U2.dx
+X_U2.dln X_U2.92 X_U2.90 X_U2.dx
+X_U2.dp -12V 12V X_U2.dx
+X_U2.egnd X_U2.99 0 poly 2 12V 0 -12V 0 0 .5 .5
+X_U2.fb X_U2.7 X_U2.99 poly 5 X_U2.vb X_U2.vc X_U2.ve X_U2.vlp
++ X_U2.vln 0 10.61E6 -10E6 10E6 10E6 -10E6
+X_U2.ga X_U2.6 0 X_U2.11 X_U2.12 X_U2.ga
+X_U2.gcm 0 X_U2.6 X_U2.10 X_U2.99 X_U2.gcm
+X_U2.iee X_U2.10 -12V dc 15.16E-6
+X_U2.hlim X_U2.90 0 X_U2.vlim X_U2.hlim
+X_U2.q1 X_U2.11 $N_0007 X_U2.13 X_U2.qx
+
+ERROR -- EVALUATION VERSION analog Node Limit (64 Nodes) Exceeded!
+
+
+
+
+ABORTING SIMULATION
+**** 12/12/21 22:03:08 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Zulfiqar\Desktop\supply\Schematic2.sch
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+
+  NUNODS  NCNODS  NUMNOD   NUMEL  DIODES    BJTS   JFETS   MFETS GASFETS   IGBTS
+
+      36      64      36      85      18       4       0       0       0       0
+
+NDIGITAL   NSTOP   NTTAR   NTTBR   NTTOV   IFILL    IOPS  PERSPA
+
+       0      36       0       0       0       0       0   0.000
+
+  NUMTTP  NUMRTP  NUMNIT   DIGTP  DIGEVT  DIGEVL
+
+       0       0       0       0       0       0
+
+                                 SECONDS      ITERATIONS
+
+
+          MATRIX SOLUTION           0.00               0
+
+          MATRIX LOAD               0.00
+
+
+          READIN                    0.00
+
+          SETUP                     0.00
+
+          DC SWEEP                  0.00               0
+
+          BIAS POINT                0.00               0
+
+          AC and NOISE              0.00               0
+
+          TRANSIENT ANALYSIS        0.00               0
+
+          OUTPUT                    0.00
+
+          OVERHEAD                   .02
+
+          TOTAL JOB TIME             .02
+

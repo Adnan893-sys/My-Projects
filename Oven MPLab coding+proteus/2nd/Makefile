@@ -1,0 +1,19 @@
+# MPLAB IDE generated this makefile for use with GNU make.
+# Project: another.mcp
+# Date: Tue May 11 02:46:01 2021
+
+AS = MPASMWIN.exe
+CC = 
+LD = mplink.exe
+AR = mplib.exe
+RM = rm
+
+another.cof : oven1.o
+	$(CC) /p18F8722 "18f8722_g.lkr" "oven1.o" /z__MPLAB_BUILD=1 /o"another.cof" /M"another.map" /W
+
+oven1.o : oven1.asm ../../../../../Program\ Files\ (x86)/Microchip/MPASM\ Suite/P18F8722.INC
+	$(AS) /q /p18F8722 "oven1.asm" /l"oven1.lst" /e"oven1.err" /o"oven1.o"
+
+clean : 
+	$(CC) "oven1.o" "oven1.err" "oven1.lst" "another.cof" "another.hex"
+

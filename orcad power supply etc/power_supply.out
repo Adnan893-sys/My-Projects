@@ -1,0 +1,287 @@
+
+**** 12/31/21 19:52:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Zulfiqar\Desktop\supply\power_supply.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Dec 09 02:27:25 2021
+
+
+
+** Analysis setup **
+.tran 0ns 1s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "power_supply.net"
+
+**** INCLUDING power_supply.net ****
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0  
++SIN 0 220 50 0 0 0
+E_U1         $N_0004 0 VALUE {LIMIT(V($N_0002,$N_0003)*1E6,-15V,+15V)}
+R_R10         0 $N_0005  10k  
+C_C3         0 $N_0005  1u  
+D_D16         0 $N_0006 D1N4002 
+D_D18         0 0 D1N4002 
+D_D17         $N_0006 $N_0005 D1N4002 
+D_D19         0 $N_0005 D1N4002 
+R_R7         $N_0005 $N_0002  1k  
+Q_Q3         $N_0005 $N_0004 $N_0005 Q2N3904
+K_TX1         L1_TX1 L2_TX1 1.0
+L1_TX1         $N_0007 0 360m
+L2_TX1        $N_0006 0 10m
+C_C1         0 $N_0005  3000u  
+R_R12         $N_0001 $N_0007  0.5  
+R_R8         0 $N_0003  5k  
+R_R6         $N_0003 $N_0005  30k  
+D_D28         0 $N_0002 Dbreak 
+
+**** RESUMING power_supply.cir ****
+.INC "power_supply.als"
+
+
+
+**** INCLUDING power_supply.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=$N_0001 -=0 )
+E_U1            U1(OUT=$N_0004 +=$N_0002 -=$N_0003 )
+R_R10           R10(1=0 2=$N_0005 )
+C_C3            C3(1=0 2=$N_0005 )
+D_D16           D16(1=0 2=$N_0006 )
+D_D18           D18(1=0 2=0 )
+D_D17           D17(1=$N_0006 2=$N_0005 )
+D_D19           D19(1=0 2=$N_0005 )
+R_R7            R7(1=$N_0005 2=$N_0002 )
+Q_Q3            Q3(c=$N_0005 b=$N_0004 e=$N_0005 )
+K_TX1           TX1()
+L1_TX1           TX1(1=$N_0007 2=0 )
+L2_TX1          TX1(3=$N_0006 4=0 )
+C_C1            C1(1=0 2=$N_0005 )
+R_R12           R12(1=$N_0001 2=$N_0007 )
+R_R8            R8(1=0 2=$N_0003 )
+R_R6            R6(1=$N_0003 2=$N_0005 )
+D_D28           D28(1=0 2=$N_0002 )
+.ENDALIASES
+
+
+**** RESUMING power_supply.cir ****
+.probe
+
+
+.END
+
+**** 12/31/21 19:52:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Zulfiqar\Desktop\supply\power_supply.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4002         Dbreak          
+          IS   14.110000E-09   10.000000E-15 
+           N    1.984                        
+         ISR  100.000000E-12                 
+         IKF   94.81                         
+          BV  100.1                          
+         IBV   10                            
+          RS     .03389          .1          
+          TT    4.761000E-06                 
+         CJO   51.170000E-12  100.000000E-15 
+          VJ     .3905                       
+           M     .2762                       
+
+
+**** 12/31/21 19:52:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Zulfiqar\Desktop\supply\power_supply.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+          RB   10            
+          RC    1            
+         CJE    4.493000E-12 
+         MJE     .2593       
+         CJC    3.638000E-12 
+         MJC     .3085       
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          CN    2.42         
+           D     .87         
+
+
+**** 12/31/21 19:52:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Zulfiqar\Desktop\supply\power_supply.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)-1.653E-15                       
+
+($N_0003)-236.1E-18                   ($N_0004)-1.417E-09                       
+
+($N_0005)-1.653E-15                   ($N_0006)    0.0000                       
+
+($N_0007)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 12/31/21 19:52:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Zulfiqar\Desktop\supply\power_supply.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_U1      
+V-SOURCE    -1.417E-09
+I-SOURCE     2.720E-21
+
+
+**** DIODES
+
+
+NAME         D_D16       D_D18       D_D17       D_D19       D_D28     
+MODEL        D1N4002     D1N4002     D1N4002     D1N4002     Dbreak    
+ID           0.00E+00    0.00E+00    4.57E-22    4.57E-22    2.29E-27 
+VD           0.00E+00    0.00E+00    1.65E-15    1.65E-15    1.65E-15 
+REQ          3.61E+06    3.61E+06    3.61E+06    3.61E+06    7.21E+11 
+CAP          5.25E-11    5.25E-11    5.25E-11    5.25E-11    1.00E-13 
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q3      
+MODEL        Q2N3904   
+IB          -2.72E-21 
+IC           2.42E-21 
+VBE         -1.42E-09 
+VBC         -1.42E-09 
+VCE          0.00E+00 
+BETADC      -2.42E-01 
+GM           0.00E+00 
+RPI          4.77E+12 
+RX           1.00E+01 
+RO           7.93E+11 
+CBE          4.49E-12 
+CBC          3.64E-12 
+CJS          0.00E+00 
+BETAAC       0.00E+00 
+CBX/CBX2     0.00E+00 
+FT/FT2       0.00E+00 
+
+
+**** 12/31/21 19:52:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Zulfiqar\Desktop\supply\power_supply.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)-1.653E-15                       
+
+($N_0003)-236.1E-18                   ($N_0004)-1.417E-09                       
+
+($N_0005)-1.653E-15                   ($N_0006)    0.0000                       
+
+($N_0007)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .17
+

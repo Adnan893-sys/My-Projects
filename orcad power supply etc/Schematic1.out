@@ -1,0 +1,151 @@
+
+**** 12/12/21 21:10:03 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Zulfiqar\Desktop\supply\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Dec 12 21:08:18 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+R_R13         $N_0002 $N_0001  820  
+R_R15         $N_0004 $N_0003  820  
+R_R14         $N_0003 $N_0002  820  
+R_R23         $N_0006 $N_0005  1k  
+R_R22         $N_0008 $N_0007  1k  
+R_R21         $N_0010 $N_0009  1k  
+R_R20         $N_0012 $N_0011  1k  
+D_D8         $N_0011 0 Dbreak 
+D_D5         $N_0005 0 Dbreak 
+D_D6         $N_0007 0 Dbreak 
+D_D7         $N_0009 0 Dbreak 
+X_U5A         Vin $N_0002 6v 0 $N_0010 LM324
+X_U7A         Vin $N_0004 6v 0 $N_0006 LM324
+X_U6A         Vin $N_0003 6v 0 $N_0008 LM324
+X_U4A         Vin $N_0001 6v 0 $N_0012 LM324
+V_V4         Vin 0 6.002V
+R_R12         $N_0001 6v  270  
+R_R29         0 $N_0004  2.7k  
+
+**** RESUMING Schematic1.cir ****
+.INC "Schematic1.als"
+
+
+
+**** INCLUDING Schematic1.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R13           R13(1=$N_0002 2=$N_0001 )
+R_R15           R15(1=$N_0004 2=$N_0003 )
+R_R14           R14(1=$N_0003 2=$N_0002 )
+R_R23           R23(1=$N_0006 2=$N_0005 )
+R_R22           R22(1=$N_0008 2=$N_0007 )
+R_R21           R21(1=$N_0010 2=$N_0009 )
+R_R20           R20(1=$N_0012 2=$N_0011 )
+D_D8            D8(1=$N_0011 2=0 )
+D_D5            D5(1=$N_0005 2=0 )
+D_D6            D6(1=$N_0007 2=0 )
+D_D7            D7(1=$N_0009 2=0 )
+X_U5A           U5A(+=Vin -=$N_0002 V+=6v V-=0 OUT=$N_0010 )
+X_U7A           U7A(+=Vin -=$N_0004 V+=6v V-=0 OUT=$N_0006 )
+X_U6A           U6A(+=Vin -=$N_0003 V+=6v V-=0 OUT=$N_0008 )
+X_U4A           U4A(+=Vin -=$N_0001 V+=6v V-=0 OUT=$N_0012 )
+V_V4            V4(+=Vin -=0 )
+R_R12           R12(1=$N_0001 2=6v )
+R_R29           R29(1=0 2=$N_0004 )
+_    _(Vin=Vin)
+_    _(6v=6v)
+.ENDALIASES
+
+
+**** RESUMING Schematic1.cir ****
+.probe
+
+
+.END
+
+
+**** EXPANSION OF SUBCIRCUIT X_U4A ****
+X_U4A.c1 X_U4A.11 X_U4A.12 2.887E-12
+
+ERROR -- EVALUATION VERSION analog Node Limit (64 Nodes) Exceeded!
+
+
+
+
+ABORTING SIMULATION
+**** 12/12/21 21:10:03 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Zulfiqar\Desktop\supply\Schematic1.sch
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+
+  NUNODS  NCNODS  NUMNOD   NUMEL  DIODES    BJTS   JFETS   MFETS GASFETS   IGBTS
+
+      15      64      15     106      19       6       0       0       0       0
+
+NDIGITAL   NSTOP   NTTAR   NTTBR   NTTOV   IFILL    IOPS  PERSPA
+
+       0      15       0       0       0       0       0   0.000
+
+  NUMTTP  NUMRTP  NUMNIT   DIGTP  DIGEVT  DIGEVL
+
+       0       0       0       0       0       0
+
+                                 SECONDS      ITERATIONS
+
+
+          MATRIX SOLUTION           0.00               0
+
+          MATRIX LOAD               0.00
+
+
+          READIN                    0.00
+
+          SETUP                     0.00
+
+          DC SWEEP                  0.00               0
+
+          BIAS POINT                0.00               0
+
+          AC and NOISE              0.00               0
+
+          TRANSIENT ANALYSIS        0.00               0
+
+          OUTPUT                    0.00
+
+          OVERHEAD                   .02
+
+          TOTAL JOB TIME             .02
+

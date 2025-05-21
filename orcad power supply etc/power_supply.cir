@@ -1,0 +1,23 @@
+* C:\Users\Zulfiqar\Desktop\supply\power_supply.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Dec 09 02:27:25 2021
+
+
+
+** Analysis setup **
+.tran 0ns 1s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "power_supply.net"
+.INC "power_supply.als"
+
+
+.probe
+
+
+.END

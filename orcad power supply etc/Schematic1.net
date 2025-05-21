@@ -1,0 +1,22 @@
+* Schematics Netlist *
+
+
+
+R_R13         $N_0002 $N_0001  820  
+R_R15         $N_0004 $N_0003  820  
+R_R14         $N_0003 $N_0002  820  
+R_R23         $N_0006 $N_0005  1k  
+R_R22         $N_0008 $N_0007  1k  
+R_R21         $N_0010 $N_0009  1k  
+R_R20         $N_0012 $N_0011  1k  
+D_D8         $N_0011 0 Dbreak 
+D_D5         $N_0005 0 Dbreak 
+D_D6         $N_0007 0 Dbreak 
+D_D7         $N_0009 0 Dbreak 
+X_U5A         Vin $N_0002 6v 0 $N_0010 LM324
+X_U7A         Vin $N_0004 6v 0 $N_0006 LM324
+X_U6A         Vin $N_0003 6v 0 $N_0008 LM324
+X_U4A         Vin $N_0001 6v 0 $N_0012 LM324
+V_V4         Vin 0 6.002V
+R_R12         $N_0001 6v  270  
+R_R29         0 $N_0004  2.7k  

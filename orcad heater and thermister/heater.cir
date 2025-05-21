@@ -1,0 +1,23 @@
+* C:\Users\Zulfiqar\Desktop\heater.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Jan 04 01:26:15 2022
+
+
+
+** Analysis setup **
+.tran 0ms 6s 0 6ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "heater.net"
+.INC "heater.als"
+
+
+.probe
+
+
+.END
