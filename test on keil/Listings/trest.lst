@@ -1,0 +1,167 @@
+A51 MACRO ASSEMBLER  TREST                                                                06/05/2022 20:59:39 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\trest.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE trest.asm SET(SMALL) DEBUG PRINT(.\Listings\trest.lst) OBJECT(.\Objects
+                      \trest.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; put data in RAM
+0000 3143616B          2     Data1: DB "1Cake 6$",0
+0004 65203624                
+0008 00                      
+0009 753041            3             MOV 30H, #'A'
+000C 753142            4             MOV 31H, #'B'
+000F 753243            5             MOV 32H, #'C'
+0012 753300            6             MOV 33H, #0     ; end of data marker
+                       7     
+                       8     
+                       9     ; initialise the display
+                      10     ; see instruction set for details
+                      11     
+                      12     
+0015 C293             13             CLR P1.3                ; clear RS - indicates that instructions are being sent to 
+                             the module
+                      14     
+                      15     ; function set  
+0017 C297             16             CLR P1.7                ; |
+0019 C296             17             CLR P1.6                ; |
+001B D295             18             SETB P1.5               ; |
+001D C294             19             CLR P1.4                ; | high nibble set
+                      20     
+001F D292             21             SETB P1.2               ; |
+0021 C292             22             CLR P1.2                ; | negative edge on E
+                      23     
+0023 1199             24             CALL delay              ; wait for BF to clear  
+                      25                                     ; function set sent for first time - tells module to go int
+                             o 4-bit mode
+                      26     ; Why is function set high nibble sent twice? See 4-bit operation on pages 39 and 42 of HD4
+                             4780.pdf.
+                      27     
+0025 D292             28             SETB P1.2               ; |
+0027 C292             29             CLR P1.2                ; | negative edge on E
+                      30                                     ; same function set high nibble sent a second time
+                      31     
+0029 D297             32             SETB P1.7               ; low nibble set (only P1.7 needed to be changed)
+                      33     
+002B D292             34             SETB P1.2               ; |
+002D C292             35             CLR P1.2                ; | negative edge on E
+                      36                                     ; function set low nibble sent
+002F 1199             37             CALL delay              ; wait for BF to clear
+                      38     
+                      39     
+                      40     ; entry mode set
+                      41     ; set to increment with no shift
+0031 C297             42             CLR P1.7                ; |
+0033 C296             43             CLR P1.6                ; |
+0035 C295             44             CLR P1.5                ; |
+0037 C294             45             CLR P1.4                ; | high nibble set
+                      46     
+0039 D292             47             SETB P1.2               ; |
+003B C292             48             CLR P1.2                ; | negative edge on E
+                      49     
+003D D296             50             SETB P1.6               ; |
+003F D295             51             SETB P1.5               ; |low nibble set
+                      52     
+A51 MACRO ASSEMBLER  TREST                                                                06/05/2022 20:59:39 PAGE     2
+
+0041 D292             53             SETB P1.2               ; |
+0043 C292             54             CLR P1.2                ; | negative edge on E
+                      55     
+0045 1199             56             CALL delay              ; wait for BF to clear
+                      57     
+                      58     
+                      59     ; display on/off control
+                      60     ; the display is turned on, the cursor is turned on and blinking is turned on
+0047 C297             61             CLR P1.7                ; |
+0049 C296             62             CLR P1.6                ; |
+004B C295             63             CLR P1.5                ; |
+004D C294             64             CLR P1.4                ; | high nibble set
+                      65     
+004F D292             66             SETB P1.2               ; |
+0051 C292             67             CLR P1.2                ; | negative edge on E
+                      68     
+0053 D297             69             SETB P1.7               ; |
+0055 D296             70             SETB P1.6               ; |
+0057 D295             71             SETB P1.5               ; |
+0059 D294             72             SETB P1.4               ; | low nibble set
+                      73     
+005B D292             74             SETB P1.2               ; |
+005D C292             75             CLR P1.2                ; | negative edge on E
+                      76     
+005F 1199             77             CALL delay              ; wait for BF to clear
+                      78     
+                      79     
+                      80     ; send data
+0061 D293             81             SETB P1.3               ; clear RS - indicates that data is being sent to module
+0063 7930             82             MOV R1, #30H            ; data to be sent to LCD is stored in 8051 RAM, starting at
+                              location 30H
+0065                  83     loop:
+0065 E7               84             MOV A, @R1              ; move data pointed to by R1 to A
+0066 6005             85             JZ finish               ; if A is 0, then end of data has been reached - jump out o
+                             f loop
+0068 116F             86             CALL sendCharacter      ; send data in A to LCD module
+006A 09               87             INC R1                  ; point to next piece of data
+006B 80F8             88             JMP loop                ; repeat
+                      89     
+006D                  90     finish:
+006D 80FE             91             JMP $
+                      92     
+                      93     
+006F                  94     sendCharacter:
+006F A2E7             95             MOV C, ACC.7            ; |
+0071 9297             96             MOV P1.7, C             ; |
+0073 A2E6             97             MOV C, ACC.6            ; |
+0075 9296             98             MOV P1.6, C             ; |
+0077 A2E5             99             MOV C, ACC.5            ; |
+0079 9295            100             MOV P1.5, C             ; |
+007B A2E4            101             MOV C, ACC.4            ; |
+007D 9294            102             MOV P1.4, C             ; | high nibble set
+                     103     
+007F D292            104             SETB P1.2               ; |
+0081 C292            105             CLR P1.2                ; | negative edge on E
+                     106     
+0083 A2E3            107             MOV C, ACC.3            ; |
+0085 9297            108             MOV P1.7, C             ; |
+0087 A2E2            109             MOV C, ACC.2            ; |
+0089 9296            110             MOV P1.6, C             ; |
+008B A2E1            111             MOV C, ACC.1            ; |
+008D 9295            112             MOV P1.5, C             ; |
+008F A2E0            113             MOV C, ACC.0            ; |
+0091 9294            114             MOV P1.4, C             ; | low nibble set
+                     115     
+0093 D292            116             SETB P1.2               ; |
+A51 MACRO ASSEMBLER  TREST                                                                06/05/2022 20:59:39 PAGE     3
+
+0095 C292            117             CLR P1.2                ; | negative edge on E
+                     118     
+0097 1199            119             CALL delay              ; wait for BF to clear
+                     120     
+0099                 121     delay:
+0099 7832            122             MOV R0, #50
+009B D8FE            123             DJNZ R0, $
+009D 22              124             RET
+*** WARNING #A41 IN 124 (trest.asm, LINE 124): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  TREST                                                                06/05/2022 20:59:39 PAGE     4
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+DATA1. . . . . . .  C ADDR   0000H   A   
+DELAY. . . . . . .  C ADDR   0099H   A   
+FINISH . . . . . .  C ADDR   006DH   A   
+LOOP . . . . . . .  C ADDR   0065H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+SENDCHARACTER. . .  C ADDR   006FH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

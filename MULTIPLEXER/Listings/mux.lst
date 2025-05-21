@@ -1,0 +1,140 @@
+A51 MACRO ASSEMBLER  MUX                                                                  06/12/2022 23:09:04 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\mux.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE mux.asm SET(SMALL) DEBUG PRINT(.\Listings\mux.lst) OBJECT(.\Objects\mux
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00h            ; starting of code    
+0000 7400              2     MOV A,#00H         ; P1 as output port
+0002 F590              3     MoV P1,A           ;mov 00 to A  
+0004 F5B0              4     MoV P3,A 
+                       5     
+0006 D280              6     SETB P0.0          ;p0.0 for S0
+0008 D281              7     SETB P0.1          ;p0.1 for S1
+000A D282              8     SETB P0.2          ;p0.2 for S2
+000C D285              9     SETB P0.5          ;p0.5 for Din
+000E D287             10     SETB P0.7          ;p0.7 for E(enable)
+                      11     
+0010                  12     AGAIN:
+0010 208776           13     jb P0.7,exit       ;check enable pin if high exit
+                      14                        ;if enable pin is low 
+0013 7900             15     mov R1,#0H         ; clear R1
+0015 7A00             16     mov R2,#0H         ;clear R2
+0017 7B00             17     mov R3,#0H         ;clear R3
+                      18     
+                      19     
+                      20     
+                      21     
+                      22     
+                      23     
+0019 308002           24     jnb P0.0,next      ;check S0 if 0 check S1 at point next
+001C 7901             25     Mov R1,#01         ;else put 1 in R1
+001E                  26     next:  
+001E 308102           27     jnb P0.1,next1     ;check S1 if 0 check S2 at point next1  
+0021 7A02             28     Mov R2,#02         ;else put 2 in R2
+0023                  29     next1:
+0023 308202           30     jnb P0.2,addition     ;check S2 if 0 do addition
+0026 7B04             31     Mov R3,#04            ;else put 4 in R3
+                      32     
+0028                  33     addition:
+0028 E9               34     Mov A,R1      ;mov R1 in A
+0029 2A               35     add A,R2      ;add R2 to A
+002A 2B               36     add A, R3     ;add R3 to A
+                      37     
+                      38     
+                      39     
+                      40     
+                      41     
+                      42     
+002B B40009           43     cjne A,#00,K1      
+002E E4               44     CLR A            
+002F F590             45     mov P1,A            
+0031 A285             46     Mov C,P0.5         
+0033 9290             47     MOV P1.0,C         
+0035 8052             48     Sjmp exit
+0037                  49     K1:
+0037 B40109           50     cjne A,#01,K2       
+003A E4               51     CLR A
+003B F590             52     mov P1,A            
+003D A285             53     Mov C,P0.5          
+003F 9291             54     MOV P1.1,C          
+0041 8046             55     Sjmp exit
+0043                  56     K2:
+0043 B40209           57     cjne A,#02,K3
+A51 MACRO ASSEMBLER  MUX                                                                  06/12/2022 23:09:04 PAGE     2
+
+0046 E4               58     CLR A
+0047 F590             59     mov P1,A
+0049 A285             60     Mov C,P0.5
+004B 9292             61     MOV P1.2,C
+004D 803A             62     Sjmp exit
+004F                  63     K3:
+004F B40309           64     cjne A,#03,K4
+0052 E4               65     CLR A
+0053 F590             66     mov P1,A
+0055 A285             67     Mov C,P0.5
+0057 9293             68     MOV P1.3,C
+0059 802E             69     Sjmp exit
+005B                  70     K4:
+005B B40409           71     cjne A,#04,K5
+005E E4               72     CLR A
+005F F590             73     mov P1,A
+0061 A285             74     Mov C,P0.5
+0063 9294             75     MOV P1.4,C
+0065 8022             76     Sjmp exit
+0067                  77     K5:
+0067 B40509           78     cjne A,#05,K6
+006A E4               79     CLR A
+006B F590             80     mov P1,A
+006D A285             81     Mov C,P0.5
+006F 9295             82     MOV P1.5,C
+0071 8016             83     Sjmp exit
+0073                  84     K6:
+0073 B40609           85     cjne A,#06,K7
+0076 E4               86     CLR A
+0077 F590             87     mov P1,A
+0079 A285             88     Mov C,P0.5
+007B 9296             89     MOV P1.6,C
+007D 800A             90     Sjmp exit
+007F                  91     K7:
+007F B40707           92     cjne A,#07,exit
+0082 E4               93     CLR A
+0083 F590             94     mov P1,A
+0085 A285             95     Mov C,P0.5
+0087 9297             96     MOV P1.7,C
+0089                  97     exit:
+0089 8085             98     jmp again
+                      99     End
+A51 MACRO ASSEMBLER  MUX                                                                  06/12/2022 23:09:04 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ADDITION . . . . .  C ADDR   0028H   A   
+AGAIN. . . . . . .  C ADDR   0010H   A   
+EXIT . . . . . . .  C ADDR   0089H   A   
+K1 . . . . . . . .  C ADDR   0037H   A   
+K2 . . . . . . . .  C ADDR   0043H   A   
+K3 . . . . . . . .  C ADDR   004FH   A   
+K4 . . . . . . . .  C ADDR   005BH   A   
+K5 . . . . . . . .  C ADDR   0067H   A   
+K6 . . . . . . . .  C ADDR   0073H   A   
+K7 . . . . . . . .  C ADDR   007FH   A   
+NEXT . . . . . . .  C ADDR   001EH   A   
+NEXT1. . . . . . .  C ADDR   0023H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

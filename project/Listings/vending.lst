@@ -1,0 +1,99 @@
+A51 MACRO ASSEMBLER  VENDING                                                              06/05/2022 20:52:56 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\vending.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE vending.asm SET(SMALL) DEBUG PRINT(.\Listings\vending.lst) OBJECT(.\Obj
+                      ects\vending.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00h
+0000 1104              2     Tr:     acall take_number
+0002 80FC              3             sjmp tr
+0004                   4     take_number:
+0004                   5     start:
+                       6     
+0004 7800              7             MOV R0, #0              ; clear R0 - the first key is key0
+                       8     
+                       9             ; scan row0
+0006 D283             10             SETB P0.3               ; set row3
+0008 C280             11             CLR P0.0                ; clear row0
+000A 112E             12             CALL colScan            ; call column-scan subroutine
+000C 20D51D           13             JB F0, finish           ; | if F0 is set, jump to end of program 
+                      14                                     ; | (because the pressed key was found and its number is in
+                               R0)
+                      15     
+                      16             ; scan row1
+000F D280             17             SETB P0.0               ; set row0
+0011 C281             18             CLR P0.1                ; clear row1
+0013 112E             19             CALL colScan            ; call column-scan subroutine
+0015 20D514           20             JB F0, finish           ; | if F0 is set, jump to end of program 
+                      21                                     ; | (because the pressed key was found and its number is in
+                               R0)
+                      22     
+                      23             ; scan row2
+0018 D281             24             SETB P0.1               ; set row1
+001A C282             25             CLR P0.2                ; clear row2
+001C 112E             26             CALL colScan            ; call column-scan subroutine
+001E 20D50B           27             JB F0, finish           ; | if F0 is set, jump to end of program 
+                      28                                     ; | (because the pressed key was found and its number is in
+                               R0)
+                      29     
+                      30             ; scan row3
+0021 D282             31             SETB P0.2               ; set row2
+0023 C283             32             CLR P0.3                ; clear row3
+0025 112E             33             CALL colScan            ; call column-scan subroutine
+0027 20D502           34             JB F0, finish           ; | if F0 is set, jump to end of program 
+                      35                                     ; | (because the pressed key was found and its number is in
+                               R0)
+                      36     
+                      37     
+002A 80D8             38             JMP start               ; | go back to scan row 0
+                      39                                     ; | (this is why row3 is set at the start of the program
+                      40                                     ; | - when the program jumps back to start, row3 has just b
+                             een scanned)
+                      41     
+002C                  42     finish:
+002C 80D2             43             JMP tr                  ; program execution arrives here when key is found - do not
+                             hing
+                      44     
+                      45     
+                      46     ; column-scan subroutine
+002E                  47     colScan:
+002E 30840A           48             JNB P0.4, gotKey        ; if col0 is cleared - key found
+0031 08               49             INC R0                  ; otherwise move to next key
+0032 308506           50             JNB P0.5, gotKey        ; if col1 is cleared - key found
+0035 08               51             INC R0                  ; otherwise move to next key
+A51 MACRO ASSEMBLER  VENDING                                                              06/05/2022 20:52:56 PAGE     2
+
+0036 308602           52             JNB P0.6, gotKey        ; if col2 is cleared - key found
+0039 08               53             INC R0                  ; otherwise move to next key
+003A 22               54             RET                     ; return from subroutine - key not found
+003B                  55     gotKey:
+003B D2D5             56             SETB F0                 ; key found - set F0
+003D 22               57             RET                     ; and return from subroutine
+003E 22               58     Ret
+*** WARNING #A41 IN 58 (vending.asm, LINE 58): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  VENDING                                                              06/05/2022 20:52:56 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+COLSCAN. . . . . .  C ADDR   002EH   A   
+F0 . . . . . . . .  B ADDR   00D0H.5 A   
+FINISH . . . . . .  C ADDR   002CH   A   
+GOTKEY . . . . . .  C ADDR   003BH   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+START. . . . . . .  C ADDR   0004H   A   
+TAKE_NUMBER. . . .  C ADDR   0004H   A   
+TR . . . . . . . .  C ADDR   0000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

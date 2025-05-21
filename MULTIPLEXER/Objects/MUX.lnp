@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\mux.obj" 
+TO ".\Objects\MUX" 
+PRINT(".\Listings\MUX.m51")
