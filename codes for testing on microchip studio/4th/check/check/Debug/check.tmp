@@ -1,0 +1,28 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\GH2\Desktop\latest\4th\check\check\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\GH2\Desktop\latest\4th\check\check\check.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\GH2\Desktop\latest\4th\check\check\Debug/check.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>check.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>check.map</FILE>
+  <FILE>check.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\GH2\Desktop\latest\4th\check\check\check.asm</FILE><LINE>15</LINE></main>
+  <ADC_Int_HANDLER><FILE>C:\Users\GH2\Desktop\latest\4th\check\check\check.asm</FILE><LINE>35</LINE></ADC_Int_HANDLER>
+  <wait_here><FILE>C:\Users\GH2\Desktop\latest\4th\check\check\check.asm</FILE><LINE>33</LINE></wait_here>
+ </LABELS>
+</ASSEMBLER_INFO>

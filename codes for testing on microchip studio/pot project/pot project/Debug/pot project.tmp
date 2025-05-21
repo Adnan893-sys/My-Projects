@@ -1,0 +1,49 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\GH2\Desktop\latest\pot project\pot project\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\Debug/pot project.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>pot project.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>pot project.map</FILE>
+  <FILE>pot project.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <Read_ADC><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>42</LINE></Read_ADC>
+  <Keep_polling><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>46</LINE></Keep_polling>
+  <start><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>58</LINE></start>
+  <go_check><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>66</LINE></go_check>
+  <next><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>70</LINE></next>
+  <Check2><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>164</LINE></Check2>
+  <Check3><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>178</LINE></Check3>
+  <next1><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>79</LINE></next1>
+  <L1><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>86</LINE></L1>
+  <do_addition><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>107</LINE></do_addition>
+  <L2><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>93</LINE></L2>
+  <L3><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>100</LINE></L3>
+  <move_next><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>117</LINE></move_next>
+  <X1><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>129</LINE></X1>
+  <division><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>137</LINE></division>
+  <end><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>142</LINE></end>
+  <FDelay><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>194</LINE></FDelay>
+  <do_Add2><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>170</LINE></do_Add2>
+  <exit2><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>175</LINE></exit2>
+  <do_Add3><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>185</LINE></do_Add3>
+  <exit3><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>191</LINE></exit3>
+  <T1><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>196</LINE></T1>
+  <T2><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>197</LINE></T2>
+  <T3><FILE>C:\Users\GH2\Desktop\latest\pot project\pot project\pot project.asm</FILE><LINE>198</LINE></T3>
+ </LABELS>
+</ASSEMBLER_INFO>

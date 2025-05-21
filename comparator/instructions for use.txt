@@ -1,0 +1,55 @@
+Instructions for using.
+We have to make the signed comparater which compares two sign numbers and shows output either both are equal or A>B or A<B.
+so first we see which are sign numbers
+The MSB of the number shows that either it is negitive or positive number.
+1011..................... is a negtive number
+0011.....................is a positive number.
+
+the circuit is comparing both inputs
+some examples are these.
+
+Example#1
+
+A=1011 .................(-3)
+B=0110..................(+6)
+
+by comparing both numbers we can conclude that B>A as +6 is greater than -3
+
+Example#2
+
+A=0011 ..............(+3)
+B=1110 ..............(-6)
+
+by comparing both numbers we can conclude that A>B as as +3 is greater than -6
+
+
+Example#3
+
+A=1010 ..............(-2)
+B=1101 ..............(-5)
+
+by comparing both numbers we can conclude that A>B as -2 is greater than -5.
+
+Example#4
+
+A=0100 ..............(+4)
+B=0101 ..............(+5)
+
+by comparing both numbers we can conclude that B>A as 5 is greater than 4.
+
+Example#5
+
+A=1010 ..............(-2)
+B=1010 ..............(-2)
+
+by comparing both numbers we can conclude that A=B as -2 is equal to -2.
+
+in that way i have tested this circuit and its working fine.
+in that way you can think any number and check it
+
+
+
+
+
+
+

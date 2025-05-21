@@ -1,0 +1,19 @@
+# MPLAB IDE generated this makefile for use with GNU make.
+# Project: 123.mcp
+# Date: Mon Aug 29 15:55:15 2022
+
+AS = MPASMWIN.exe
+CC = 
+LD = mplink.exe
+AR = mplib.exe
+RM = rm
+
+123.cof : ss.o
+	$(CC) /p16F690 "16f690_g.lkr" "ss.o" /u_DEBUG /z__MPLAB_BUILD=1 /z__MPLAB_DEBUG=1 /o"123.cof" /M"123.map" /W
+
+ss.o : ss.ASM ../../../../Program\ Files\ (x86)/Microchip/MPASM\ Suite/p16F690.inc
+	$(AS) /q /p16F690 "ss.ASM" /l"ss.lst" /e"ss.err" /o"ss.o" /d__DEBUG=1
+
+clean : 
+	$(CC) "ss.o" "ss.err" "ss.lst" "123.cof" "123.hex"
+

@@ -1,0 +1,44 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\Debug/conversion.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>conversion.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>conversion.map</FILE>
+  <FILE>conversion.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>20</LINE></start>
+  <Check><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>27</LINE></Check>
+  <do_Add><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>34</LINE></do_Add>
+  <exit><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>47</LINE></exit>
+  <next><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>50</LINE></next>
+  <here><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>46</LINE></here>
+  <check1><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>100</LINE></check1>
+  <check2><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>116</LINE></check2>
+  <check3><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>130</LINE></check3>
+  <check_second><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>62</LINE></check_second>
+  <check_3><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>68</LINE></check_3>
+  <end_b><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>74</LINE></end_b>
+  <end><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>96</LINE></end>
+  <do_Add1><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>107</LINE></do_Add1>
+  <exit1><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>113</LINE></exit1>
+  <do_Add2><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>122</LINE></do_Add2>
+  <exit2><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>127</LINE></exit2>
+  <do_Add3><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>137</LINE></do_Add3>
+  <exit3><FILE>C:\Users\GH2\Desktop\latest\sd\conversion\conversion\conversion.asm</FILE><LINE>143</LINE></exit3>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,48 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\Debug/conversion 2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>conversion 2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>conversion 2.map</FILE>
+  <FILE>conversion 2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>19</LINE></start>
+  <go_check><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>27</LINE></go_check>
+  <next><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>31</LINE></next>
+  <Check2><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>115</LINE></Check2>
+  <Check3><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>129</LINE></Check3>
+  <next1><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>40</LINE></next1>
+  <L1><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>47</LINE></L1>
+  <do_addition><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>68</LINE></do_addition>
+  <L2><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>54</LINE></L2>
+  <L3><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>61</LINE></L3>
+  <move_next><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>78</LINE></move_next>
+  <X1><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>88</LINE></X1>
+  <division><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>97</LINE></division>
+  <end><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>103</LINE></end>
+  <here><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>106</LINE></here>
+  <do_Add2><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>121</LINE></do_Add2>
+  <exit2><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>126</LINE></exit2>
+  <do_Add3><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>136</LINE></do_Add3>
+  <exit3><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>142</LINE></exit3>
+  <FDelay><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>145</LINE></FDelay>
+  <T1><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>147</LINE></T1>
+  <T2><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>148</LINE></T2>
+  <T3><FILE>C:\Users\GH2\Desktop\latest\4th\conversion 2\conversion 2\conversion 2.asm</FILE><LINE>149</LINE></T3>
+ </LABELS>
+</ASSEMBLER_INFO>

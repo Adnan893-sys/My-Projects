@@ -1,0 +1,3 @@
+Warning[203] C:\USERS\GH2\DESKTOP\M\SS.ASM 114 : Found opcode in column 1. (movlw)
+Warning[203] C:\USERS\GH2\DESKTOP\M\SS.ASM 115 : Found opcode in column 1. (movwf)
+Warning[207] C:\USERS\GH2\DESKTOP\M\SS.ASM 239 : Found label after column 1. (Display)

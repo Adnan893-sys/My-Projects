@@ -1,0 +1,909 @@
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;**********************************************************************
+                      00002 ;   This file is a basic code template for object module code         *
+                      00003 ;   generation on the PIC16F690. This file contains the               *
+                      00004 ;   basic code building blocks to build upon.                         *
+                      00005 ;                                                                     *
+                      00006 ;   Refer to the MPASM User's Guide for additional information on     *
+                      00007 ;   features of the assembler and linker (Document DS33014).          *
+                      00008 ;                                                                     *
+                      00009 ;   Refer to the respective PIC data sheet for additional             *
+                      00010 ;   information on the instruction set.                               *
+                      00011 ;                                                                     *
+                      00012 ;**********************************************************************
+                      00013 ;                                                                     *
+                      00014 ;    Filename:      xxx.asm                                           *
+                      00015 ;    Date:                                                            *
+                      00016 ;    File Version:                                                    *
+                      00017 ;                                                                     *
+                      00018 ;    Author:                                                          *
+                      00019 ;    Company:                                                         *
+                      00020 ;                                                                     *
+                      00021 ;                                                                     *
+                      00022 ;**********************************************************************
+                      00023 ;                                                                     *
+                      00024 ;    Files required: P16F690.INC                                      *
+                      00025 ;                                                                     *
+                      00026 ;                                                                     *
+                      00027 ;                                                                     *
+                      00028 ;**********************************************************************
+                      00029 ;                                                                     *
+                      00030 ;    Notes:                                                           *
+                      00031 ;                                                                     *
+                      00032 ;                                                                     *
+                      00033 ;                                                                     *
+                      00034 ;                                                                     *
+                      00035 ;**********************************************************************
+                      00036 
+                      00037     list      p=16F690           ; list directive to define processor
+                      00038     #include <p16F690.inc>        ; processor specific variable definitions
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F690 processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2013 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+                      00756         LIST
+                      00039 
+                      00040     errorlevel  -302              ; suppress message 302 from list file
+                      00041 
+2007   30E4           00042     __CONFIG   _CP_OFF & _CPD_OFF & _BOR_OFF & _MCLRE_ON & _WDT_OFF & _PWRTE_ON & _INTRC_OSC_NOCLKOUT & 
+                            _FCMEN_OFF & _IESO_OFF 
+                      00043 
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00044 ; '__CONFIG' directive is used to embed configuration word within .asm file.
+                      00045 ; The lables following the directive are located in the respective .inc file.
+                      00046 ; See data sheet for additional information on configuration word settings.
+                      00047 
+                      00048 ;***** VARIABLE DEFINITIONS (examples)
+                      00049 
+                      00050 ; example of using Shared Uninitialized Data Section
+                      00051 INT_VAR     UDATA_SHR     
+0000                  00052 w_temp      RES     1       ; variable used for context saving 
+0001                  00053 status_temp RES     1       ; variable used for context saving
+0002                  00054 pclath_temp RES     1       ; variable used for context saving
+                      00055 
+                      00056 ;**********************************************************************
+                      00057 RESET_VECTOR    CODE    0x0000       ; processor reset vector
+                      00058 
+0000   2???           00059         goto    main                ; go to beginning of program
+                      00060 
+                      00061 INT_VECTOR      CODE    0x0004       ; interrupt vector location
+                      00062 
+0004                  00063 INTERRUPT
+                      00064 
+0004   00??           00065         movwf   w_temp            ; save off current W register contents
+0005   0803           00066         movf    STATUS,w          ; move status register into W register
+0006   00??           00067         movwf   status_temp       ; save off contents of STATUS register
+0007   080A           00068         movf    PCLATH,w          ; move pclath register into W register
+0008   00??           00069         movwf   pclath_temp       ; save off contents of PCLATH register
+                      00070 
+                      00071 
+                      00072 
+                      00073 ; isr code can go here or be located as a call subroutine elsewhere
+                      00074 
+                      00075 
+0009   08??           00076         movf    pclath_temp,w     ; retrieve copy of PCLATH register
+000A   008A           00077         movwf   PCLATH            ; restore pre-isr PCLATH register contents
+000B   08??           00078         movf    status_temp,w     ; retrieve copy of STATUS register
+000C   0083           00079         movwf   STATUS            ; restore pre-isr STATUS register contents
+000D   0E??           00080         swapf   w_temp,f
+000E   0E??           00081         swapf   w_temp,w          ; restore pre-isr W register contents
+000F   0009           00082         retfie                    ; return from interrupt
+                      00083 
+                      00084 MAIN_PROG       CODE
+                      00085 
+0000                  00086 main
+                      00087 
+  00000003            00088 status equ 0x003
+  00000007            00089 PORTC equ 0x007
+  00000006            00090 PORTB equ 0x006
+  00000005            00091 PORTA equ 0x005
+  00000085            00092 TRISA equ 0x085
+  00000086            00093 TRISB equ 0x086
+  00000087            00094 TRISC equ 0x087
+  00000002            00095 PCL equ 0x02
+                      00096 
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00097 
+                      00098 ;table   addwf PCL,f
+                      00099         ;DT 0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x67   
+                      00100 
+  00000020            00101 R1 equ 0x20      
+  00000021            00102 R2 equ 0x21
+  00000022            00103 R3 equ 0x22
+                      00104 
+  00000024            00105 T1 equ 0x24
+  00000025            00106 num1 equ 0x25
+  00000026            00107 num2 equ 0x26
+  00000027            00108 copy equ 0x27
+  00000029            00109 copy1 equ 0x29
+  00000030            00110 copy2 equ 0x30
+  00000031            00111 num3 equ 0x31
+  00000032            00112 x    equ 0x32
+  00000028            00113 counter equ 0x28
+Warning[203]: Found opcode in column 1. (movlw)
+0000   3000           00114 movlw 0x00
+Warning[203]: Found opcode in column 1. (movwf)
+0001   00A8           00115 movwf counter
+                      00116 
+0002   1683           00117           bsf status,RP0     ;select bank1 
+0003   3000           00118           MOVLW 0x00         ;load 0 to W
+0004   0087           00119           MOVWF TRISC        ;PORTC AS output
+0005   1283           00120           bcf status,RP0     ;Select bank0
+                      00121 
+0006   1283           00122           BCF STATUS,RP0     ;Bank 0
+0007   1303           00123           BCF STATUS,RP1     ;
+0008   30FF           00124           Movlw 0xFF         ;make all pins of PORTB as HIGH
+0009   0086           00125           movwf  PORTB       ;Init PORTB
+000A   1683           00126           BSF STATUS,RP0     ;Bank 1
+000B   30C0           00127           MOVLW 0xC0         ;Set RB<7:6> as inputs
+000C   0086           00128           MOVWF TRISB ;      ;set PORTB
+000D   1283           00129           BCF STATUS,RP0     ;Bank 0
+                      00130    
+000E                  00131 L1:
+000E   0187           00132           CLRF PORTC            ;Clear PORTC
+000F   0103           00133           CLRW                  ;clear Wreg
+0010   1B06           00134 Again     BTFSC PORTB,6         ;check Up Button if pressed
+0011   2???           00135           goto Check_second     ;if not pressed check 2nd button
+0012   300D           00136           movlw D'13'           ;load W=13
+0013   00B2           00137           movwf x               ;save  that value to x
+0014   2???           00138 TE1       Call S_delay          ;call delay
+0015   2???           00139           call Display          ;Display during debouncing
+0016   03B2           00140           decf x,f              ;decrement x
+0017   1D03 2???      00141           Bnz TE1               ;if x is not zero go back
+0019   1F06           00142           BTFSS PORTB,6         ;chcek if button is pressed long
+001A   2???           00143           goto Again            ; goto again
+001B   0AA8           00144           incf counter,f        ; increment counter
+001C   0828           00145           movf counter,w        ; load that counter to W
+001D   3A64           00146           xorlw 0x64            ;comapre that counter with 99(0x64)
+001E   1903 2???      00147           bz make_zero          ;if counter became 99 then branch
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0020   2???           00148           goto show             ;else show number
+0021                  00149 make_zero
+0021   3000           00150           movlw 0x00            ;mov 0 to W
+0022   00A8           00151           movwf counter         ;make counter to 0 if it becane 99
+0023   2???           00152           goto show             ;then show number
+                      00153           
+0024                  00154 Check_second
+0024   1B86           00155           BTFSC PORTB,7          ;check Down Button if pressed
+0025   2???           00156           goto show              ;else show number
+0026   300D           00157           movlw D'13'            ;load W=13  
+0027   00B2           00158           movwf x                ;save  that value to x
+0028   2???           00159 TE2       Call S_delay           ;call delay
+0029   2???           00160           call Display           ;Display during debouncing
+002A   03B2           00161           decf x,f               ;decrement x
+002B   1D03 2???      00162           Bnz TE2                ;if x is not zero go back
+002D   1F86           00163           BTFSS PORTB,7          ;chcek if button is pressed long
+002E   2???           00164           goto Check_second      ; goto check_second
+002F   03A8           00165           decf counter,f         ; increment counter
+0030   0828           00166           movf counter,w         ; load that counter to W
+0031   3A00           00167           xorlw 0x00             ;comapre that counter with 00(0x00)
+0032   1903 2???      00168           bz make_ninty_nine     ;if counter became 00 then branch
+0034   2???           00169           goto show              ;then show number
+0035                  00170 make_ninty_nine
+0035   3063           00171           movlw 0x63             ;mov 0 to W
+0036   00A8           00172           movwf counter          ;make counter to 99 if it became 00
+0037   2???           00173           goto show              ;then show number
+0038                  00174 show
+                      00175        
+0038   0828           00176         movf counter,w           ;mov counter to W register
+0039   00A7           00177         movwf copy               ; also save its copy in copy variable
+003A   1003           00178         clrc                     ; clear carry 
+003B   3000           00179         movlw 0x00               ; move 0 to W register
+003C   00B1           00180         movwf num3               ; 0 to num3 to clear it
+003D   2???           00181         call make_number         ; call make_number subroutine
+003E   2???           00182         call Display             ;call dislay subraotine
+003F   2???           00183         goto Again               ; again check both buttons status
+                      00184 
+                      00185 
+0040                  00186 make_number
+0040   0827           00187         movf copy,w             ;load copy variab;e to W register
+0041   00A9           00188         movwf copy1             ;also save one copy in copy1 variable
+0042   300A           00189 back    movlw 0x0A              ;load 10 to w  
+                      00190  
+0043   0229           00191          subwf copy1,w          ;subtract 10 from the number
+0044   1C03           00192          btfss status,C         ;if carry is set skip next instruction
+0045   2???           00193          goto less              ;else gotor less label 
+0046   0AB1           00194          incf num3,f            ;increment num3  
+0047   00A9           00195          movwf copy1            ;update copy1 variable by W
+0048   3A09           00196          xorlw 0x09             ;check if 09 reamined in copy1
+0049   1903 2???      00197          bz less                ;if yes branch to less label
+                      00198 
+004B   0829           00199          movf copy1,w           ;load copy1 in W
+004C   3A08           00200          xorlw 0x08             ;check if 08 reamined in copy1          
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+004D   1903 2???      00201          bz less                ;if yes branch to less label
+                      00202 
+004F   0829           00203          movf copy1,w           ;load copy1 in W
+0050   3A07           00204          xorlw 0x07             ;check if 07 reamined in copy1
+0051   1903 2???      00205          bz less                ;if yes branch to less label
+                      00206 
+0053   0829           00207          movf copy1,w           ;load copy1 in W
+0054   3A06           00208          xorlw 0x06             ;check if 06 reamined in copy1
+0055   1903 2???      00209          bz less                ;if yes branch to less label
+                      00210 
+0057   0829           00211          movf copy1,w           ;load copy1 in W
+0058   3A05           00212          xorlw 0x05             ;check if 05 reamined in copy1
+0059   1903 2???      00213          bz less                ;if yes branch to less label
+                      00214 
+005B   0829           00215          movf copy1,w           ;load copy1 in W
+005C   3A04           00216          xorlw 0x04             ;check if 04 reamined in copy1
+005D   1903 2???      00217          bz less                ;if yes branch to less label
+                      00218 
+005F   0829           00219          movf copy1,w           ;load copy1 in W
+0060   3A03           00220          xorlw 0x03             ;check if 03 reamined in copy1
+0061   1903 2???      00221          bz less                ;if yes branch to less label
+                      00222 
+0063   0829           00223          movf copy1,w           ;load copy1 in W
+0064   3A02           00224          xorlw 0x02             ;check if 02 reamined in copy1
+0065   1903 2???      00225          bz less                ;if yes branch to less label
+                      00226 
+0067   0829           00227          movf copy1,w           ;load copy1 in W
+0068   3A01           00228          xorlw 0x01             ;check if 01 reamined in copy1
+0069   1903 2???      00229          bz less                ;if yes branch to less label
+                      00230         
+006B   0829           00231          movf copy1,w           ;load copy1 in W
+006C   3A00           00232          xorlw 0x00             ;check if 00 reamined in copy1
+006D   1903 2???      00233          bz less                ;if yes branch to less label
+006F   2???           00234          goto back              ;else go back to subtract next
+                      00235          
+0070                  00236 less
+0070   0008           00237         Return                  ;return from subrotine
+                      00238           
+Warning[207]: Found label after column 1. (Display)
+0071                  00239  Display        
+0071   1206           00240           Bcf PORTB,4           ;s1 on
+0072   1686           00241           Bsf PORTB,5           ;s2 off
+0073   0831           00242           movf num3,w           ;load number to W       
+0074   2???           00243           call table            ;load number from table
+0075   0087           00244           Movwf PORTC           ;load respective number to PORTC
+0076   2???           00245           Call Delay            ;call delay to show number on 1st 7seg
+                      00246          
+0077   1606           00247           Bsf PORTB,4           ;s1 off
+0078   1686           00248           Bsf PORTB,5           ;s2 off
+0079   2???           00249           call S_delay          ;off both digits and give short delay      
+                      00250           
+007A   1606           00251          Bsf PORTB,4            ;s2 on   
+007B   1286           00252          Bcf PORTB,5            ;s1 off
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+007C   0829           00253          movf copy1,w           ;load number to W    
+007D   2???           00254          call table             ;load number from table
+007E   0087           00255          Movwf PORTC            ;load respective number to PORTC
+007F   2???           00256          Call Delay             ;call delay to show number on 2nd 7seg
+                      00257 
+0080   0008           00258           Return                ;return from subrotine
+                      00259          
+0081                  00260 table  
+0081   0782           00261          addwf PCL,f            ;add PCL with wreg 
+0082   343F           00262          retlw 0x3F             ;0     
+0083   3406           00263          retlw 0x06             ;1
+0084   345B           00264          retlw 0x5B             ;2
+0085   344F           00265          retlw 0x4F             ;3
+0086   3466           00266          retlw 0x66             ;4
+0087   346D           00267          retlw 0x6D             ;5
+0088   347D           00268          retlw 0x7D             ;6
+0089   3407           00269          retlw 0x07             ;7
+008A   347F           00270          retlw 0x7F             ;8
+008B   3467           00271          retlw 0x67             ;9         
+                      00272 
+008C                  00273 S_delay
+008C   3046           00274           MOVLW D'70'           ;load 70 to Wreg
+008D   00A1           00275           MOVWF R2              ;load W to R2
+008E   3064           00276 T2        MOVLW D'100'          ;load 100 to Wreg
+008F   00A2           00277           MOVWF R3              ;load W to R3
+0090                  00278 T3        
+0090   0000           00279           NOP                   ;do nothing
+0091   0000           00280           NOP                   ;do nothing
+0092   03A2           00281           DECF R3,F             ;decrement R3
+0093   1D03 2???      00282           BNZ T3                ;branch to T3 if not 0
+0095   03A1           00283           DECF R2,F             ;decrement R2
+0096   1D03 2???      00284           BNZ T2                ;branch to T2 if not 0
+0098   0008           00285           Return                ;return from subrotine
+                      00286 
+0099                  00287 Delay
+0099   3001           00288           MOVLW D'1'            ;load 1 to Wreg  
+009A   00A0           00289           MOVWF R1              ;load W to R2
+009B   3023           00290 D1        MOVLW D'35'           ;load 35 to Wreg 
+009C   00A1           00291           MOVWF R2              ;load W to R2
+009D   300C           00292 D2        MOVLW D'12'           ;load 12 to Wreg  
+009E   00A2           00293           MOVWF R3              ;load W to R2
+009F                  00294 D3        
+009F   0000           00295           NOP                   ;do nothing
+00A0   0000           00296           NOP                   ;do nothing
+00A1   03A2           00297           DECF R3,F             ;decrement R3
+00A2   1D03 2???      00298           BNZ D3                ;branch to D3 if not 0
+00A4   03A1           00299           DECF R2,F             ;decrement R2
+00A5   1D03 2???      00300           BNZ D2                ;branch to D2 if not 0
+00A7   03A0           00301           DECF R1,F             ;decrement R1
+00A8   1D03 2???      00302           BNZ D1                ;branch to D1 if not 0
+00AA   0008           00303           Return                ;return from subrotine
+30E4                  00304            END                       
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ABDEN                             00000000
+ABDOVF                            00000007
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000004
+ADCS1                             00000005
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+ANS0                              00000000
+ANS1                              00000001
+ANS10                             00000002
+ANS11                             00000003
+ANS2                              00000002
+ANS3                              00000003
+ANS4                              00000004
+ANS5                              00000005
+ANS6                              00000006
+ANS7                              00000007
+ANS8                              00000000
+ANS9                              00000001
+ANSEL                             0000011E
+ANSELH                            0000011F
+Again                             00000010
+BAUDCTL                           0000009B
+BF                                00000000
+BRG0                              00000000
+BRG1                              00000001
+BRG10                             00000002
+BRG11                             00000003
+BRG12                             00000004
+BRG13                             00000005
+BRG14                             00000006
+BRG15                             00000007
+BRG16                             00000003
+BRG2                              00000002
+BRG3                              00000003
+BRG4                              00000004
+BRG5                              00000005
+BRG6                              00000006
+BRG7                              00000007
+BRG8                              00000000
+BRG9                              00000001
+BRGH                              00000002
+C                                 00000000
+C1CH0                             00000000
+C1CH1                             00000001
+C1IE                              00000005
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+C1IF                              00000005
+C1OE                              00000005
+C1ON                              00000007
+C1OUT                             00000006
+C1POL                             00000004
+C1R                               00000002
+C1SEN                             00000005
+C1VREN                            00000007
+C2CH0                             00000000
+C2CH1                             00000001
+C2IE                              00000006
+C2IF                              00000006
+C2OE                              00000005
+C2ON                              00000007
+C2OUT                             00000006
+C2POL                             00000004
+C2R                               00000002
+C2REN                             00000004
+C2SYNC                            00000000
+C2VREN                            00000006
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCPR                              00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CHS0                              00000002
+CHS1                              00000003
+CHS2                              00000004
+CHS3                              00000005
+CKE                               00000006
+CKP                               00000004
+CM1CON0                           00000119
+CM2CON0                           0000011A
+CM2CON1                           0000011B
+CREN                              00000004
+CSRC                              00000007
+Check_second                      00000024
+D                                 00000005
+D1                                0000009B
+D2                                0000009D
+D3                                0000009F
+DATA_ADDRESS                      00000005
+DC                                00000001
+DC1B0                             00000004
+DC1B1                             00000005
+D_A                               00000005
+D_NOT_A                           00000005
+Delay                             00000099
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+Display                           00000071
+ECCPAS                            0000001D
+ECCPAS0                           00000004
+ECCPAS1                           00000005
+ECCPAS2                           00000006
+ECCPASE                           00000007
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDAT                             0000010C
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GIE                               00000007
+GO                                00000001
+GO_DONE                           00000001
+GO_NOT_DONE                       00000001
+HTS                               00000002
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTERRUPT                         00000004
+INTF                              00000001
+IOC                               00000096
+IOC0                              00000000
+IOC1                              00000001
+IOC2                              00000002
+IOC3                              00000003
+IOC4                              00000004
+IOC5                              00000005
+IOCA                              00000096
+IOCA0                             00000000
+IOCA1                             00000001
+IOCA2                             00000002
+IOCA3                             00000003
+IOCA4                             00000004
+IOCA5                             00000005
+IOCB                              00000116
+IOCB4                             00000004
+IOCB5                             00000005
+IOCB6                             00000006
+IOCB7                             00000007
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+IRCF0                             00000004
+IRCF1                             00000005
+IRCF2                             00000006
+IRP                               00000007
+L1                                0000000E
+LTS                               00000001
+MC1OUT                            00000007
+MC2OUT                            00000006
+MSK                               00000093
+MSK0                              00000000
+MSK1                              00000001
+MSK2                              00000002
+MSK3                              00000003
+MSK4                              00000004
+MSK5                              00000005
+MSK6                              00000006
+MSK7                              00000007
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BOR                           00000000
+NOT_DONE                          00000001
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RABPU                         00000007
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OERR                              00000001
+OPTION_REG                        00000081
+OSCCON                            0000008F
+OSCTUNE                           00000090
+OSFIE                             00000007
+OSFIF                             00000007
+OSTS                              00000003
+P                                 00000004
+P1M0                              00000006
+P1M1                              00000007
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PDC0                              00000000
+PDC1                              00000001
+PDC2                              00000002
+PDC3                              00000003
+PDC4                              00000004
+PDC5                              00000005
+PDC6                              00000006
+PEIE                              00000006
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PR2                               00000092
+PRSEN                             00000007
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSSAC0                            00000002
+PSSAC1                            00000003
+PSSBD0                            00000000
+PSSBD1                            00000001
+PSTRCON                           0000019D
+PULSR                             00000002
+PULSS                             00000003
+PWM1CON                           0000001C
+R                                 00000002
+R1                                00000020
+R2                                00000021
+R3                                00000022
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RABIE                             00000003
+RABIF                             00000000
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RCIDL                             00000006
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+READ_WRITE                        00000002
+RP0                               00000005
+RP1                               00000006
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE 12
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+R_W                               00000002
+S                                 00000003
+SBOREN                            00000004
+SCKP                              00000004
+SCS                               00000000
+SENB                              00000003
+SENDB                             00000003
+SMP                               00000007
+SPBRG                             00000099
+SPBRGH                            0000009A
+SPEN                              00000007
+SR0                               00000006
+SR1                               00000007
+SRCON                             0000019E
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPMSK                            00000093
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+STRA                              00000000
+STRB                              00000001
+STRC                              00000002
+STRD                              00000003
+STRSYNC                           00000004
+SWDTEN                            00000000
+SYNC                              00000004
+S_delay                           0000008C
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1                                00000024
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1GINV                            00000007
+T1GSS                             00000001
+T1IE                              00000000
+T1IF                              00000000
+T1OSCEN                           00000003
+T2                                0000008E
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE 13
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+T2CON                             00000012
+T2IE                              00000001
+T2IF                              00000001
+T3                                00000090
+TE1                               00000014
+TE2                               00000028
+TMR0                              00000001
+TMR1                              0000000E
+TMR1CS                            00000001
+TMR1GE                            00000006
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRMT                              00000001
+TUN0                              00000000
+TUN1                              00000001
+TUN2                              00000002
+TUN3                              00000003
+TUN4                              00000004
+TX9                               00000006
+TX9D                              00000000
+TXEN                              00000005
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE 14
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TXIE                              00000004
+TXIF                              00000004
+TXREG                             00000019
+TXSTA                             00000098
+UA                                00000001
+ULPWUE                            00000005
+VCFG                              00000006
+VP6EN                             00000004
+VR0                               00000000
+VR1                               00000001
+VR2                               00000002
+VR3                               00000003
+VRCON                             00000118
+VRR                               00000005
+W                                 00000000
+WCOL                              00000007
+WDTCON                            00000097
+WDTPS0                            00000001
+WDTPS1                            00000002
+WDTPS2                            00000003
+WDTPS3                            00000004
+WPU                               00000095
+WPU0                              00000000
+WPU1                              00000001
+WPU2                              00000002
+WPU4                              00000004
+WPU5                              00000005
+WPUA                              00000095
+WPUA0                             00000000
+WPUA1                             00000001
+WPUA2                             00000002
+WPUA4                             00000004
+WPUA5                             00000005
+WPUB                              00000115
+WPUB4                             00000004
+WPUB5                             00000005
+WPUB6                             00000006
+WPUB7                             00000007
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+WUE                               00000001
+Z                                 00000002
+_BOD_NSLEEP                       00003EFF
+_BOD_OFF                          00003CFF
+_BOD_ON                           00003FFF
+_BOD_SBODEN                       00003DFF
+_BOREN_NSLEEP                     00003EFF
+_BOREN_OFF                        00003CFF
+_BOREN_ON                         00003FFF
+_BOREN_SBODEN                     00003DFF
+_BOR_NSLEEP                       00003EFF
+_BOR_OFF                          00003CFF
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE 15
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_BOR_ON                           00003FFF
+_BOR_SBODEN                       00003DFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003F7F
+_CP_OFF                           00003FFF
+_CP_ON                            00003FBF
+_DEVID1                           00002006
+_EC_OSC                           00003FFB
+_EXTRC                            00003FFF
+_EXTRCIO                          00003FFE
+_EXTRC_OSC_CLKOUT                 00003FFF
+_EXTRC_OSC_NOCLKOUT               00003FFE
+_FCMEN_OFF                        000037FF
+_FCMEN_ON                         00003FFF
+_FOSC_EC                          00003FFB
+_FOSC_EXTRCCLK                    00003FFF
+_FOSC_EXTRCIO                     00003FFE
+_FOSC_HS                          00003FFA
+_FOSC_INTRCCLK                    00003FFD
+_FOSC_INTRCIO                     00003FFC
+_FOSC_LP                          00003FF8
+_FOSC_XT                          00003FF9
+_HS_OSC                           00003FFA
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_IESO_OFF                         00003BFF
+_IESO_ON                          00003FFF
+_INTOSC                           00003FFD
+_INTOSCIO                         00003FFC
+_INTRC_OSC_CLKOUT                 00003FFD
+_INTRC_OSC_NOCLKOUT               00003FFC
+_LP_OSC                           00003FF8
+_MCLRE_OFF                        00003FDF
+_MCLRE_ON                         00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FEF
+_WDTE_OFF                         00003FF7
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FF7
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FF9
+__16F690                          00000001
+__DEBUG                           1
+back                              00000042
+copy                              00000027
+copy1                             00000029
+copy2                             00000030
+counter                           00000028
+less                              00000070
+main                              00000000
+MPASM  5.51                            SS.ASM   8-30-2022  1:12:39         PAGE 16
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+make_ninty_nine                   00000035
+make_number                       00000040
+make_zero                         00000021
+num1                              00000025
+num2                              00000026
+num3                              00000031
+pclath_temp                       00000002
+show                              00000038
+status                            00000003
+status_temp                       00000001
+table                             00000081
+w_temp                            00000000
+x                                 00000032
+
+Errors   :     0
+Warnings :     3 reported,     0 suppressed
+Messages :     0 reported,     2 suppressed
+
+
