@@ -1,0 +1,52 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Tue Mar 02 20:02:18 2021
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000006
+                   .cinit    romdata   0x000006    program   0x000002
+                   .org_1       code   0x000008    program   0x000004
+                   .org_2       code   0x000018    program   0x000080
+.config_300000_FLASHLED.O       code   0x300000    program   0x000002
+.config_300002_FLASHLED.O       code   0x300002    program   0x000002
+.config_300004_FLASHLED.O       code   0x300004    program   0x000002
+.config_300006_FLASHLED.O       code   0x300006    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00000b      
+                            0x000018    0x000097      
+                            0x300000    0x300007      
+            148 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+               BlinkAlive   0x000034    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+                  Initial   0x00003e    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+                     Loop   0x00001e    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+                 LoopTime   0x00006c    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+                 Mainline   0x00001c    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+             _.org_1_0008   0x000008    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+             _.org_2_0018   0x000018    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             _.org_1_0008   0x000008    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+             _.org_2_0018   0x000018    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+                 Mainline   0x00001c    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+                     Loop   0x00001e    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+               BlinkAlive   0x000034    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+                  Initial   0x00003e    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+                 LoopTime   0x00006c    program     static C:\Users\Zulfiqar\Desktop\assemly ka\2ND\FLASHLED.ASM
+
+
