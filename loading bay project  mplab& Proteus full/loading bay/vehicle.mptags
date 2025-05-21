@@ -1,0 +1,36 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+BNZ	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	205;"	v	line:205
+BNZ	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	207;"	v	line:207
+BSR_TEMP	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	76;"	q	line:76
+D1	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	200;"	l	line:200
+D2	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	202;"	l	line:202
+DATAEE	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	85;"	l	line:85
+HIGH_ISR	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	118;"	l	line:118
+ISRH	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	100;"	l	line:100
+ISRL	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	109;"	l	line:109
+L2	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	174;"	l	line:174
+L3	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	184;"	l	line:184
+L4	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	189;"	l	line:189
+LOW_ISR	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	128;"	l	line:128
+MOVLF	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	162;"	m	line:162
+QDELAY	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	197;"	l	line:197
+R1	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	148;"	q	line:148
+R2	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	149;"	q	line:149
+R3	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	150;"	q	line:150
+R4	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	151;"	q	line:151
+RES_VECT	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	93;"	l	line:93
+SEND	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	155;"	m	line:155
+SPEED	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	211;"	l	line:211
+STARTMOTOR	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	225;"	l	line:225
+STATUS_TEMP	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	75;"	q	line:75
+W_TEMP	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	74;"	q	line:74
+Z1	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	214;"	l	line:214
+Z2	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	216;"	l	line:216
+main	C:\Users\Zulfiqar\Desktop\my work done\final\loading bay\design.asm	146;"	l	line:146

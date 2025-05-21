@@ -1,0 +1,84 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Mon Jul 04 16:24:09 2022
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_1       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                   .org_2       code   0x000008    program   0x000004
+                   .org_3       code   0x000018    program   0x0000a6
+  .config_300001_DESIGN.O    romdata   0x300001    program   0x000001
+  .config_300002_DESIGN.O    romdata   0x300002    program   0x000001
+  .config_300003_DESIGN.O    romdata   0x300003    program   0x000001
+  .config_300005_DESIGN.O    romdata   0x300005    program   0x000001
+  .config_300006_DESIGN.O    romdata   0x300006    program   0x000001
+  .config_300008_DESIGN.O    romdata   0x300008    program   0x000001
+  .config_300009_DESIGN.O    romdata   0x300009    program   0x000001
+  .config_30000A_DESIGN.O    romdata   0x30000a    program   0x000001
+  .config_30000B_DESIGN.O    romdata   0x30000b    program   0x000001
+  .config_30000C_DESIGN.O    romdata   0x30000c    program   0x000001
+  .config_30000D_DESIGN.O    romdata   0x30000d    program   0x000001
+                   .org_0       code   0xf00000    program   0x000004
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x000008    0x00000b      
+                            0x000018    0x0000bd      
+                            0x300001    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+                            0xf00000    0xf00003      
+            191 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       D1   0x000074    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       D2   0x000078    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                   DATAEE   0xf00000    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                 HIGH_ISR   0x00001c    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                     ISRH   0x000008    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                     ISRL   0x000018    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       L2   0x000042    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       L3   0x00005c    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       L4   0x000064    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                  LOW_ISR   0x00001e    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                   QDELAY   0x000070    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                 RES_VECT   0x000000    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                    SPEED   0x000086    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+               STARTMOTOR   0x00009c    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       Z1   0x00008a    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       Z2   0x00008e    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                     main   0x000034    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 RES_VECT   0x000000    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                     ISRH   0x000008    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                     ISRL   0x000018    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                 HIGH_ISR   0x00001c    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                  LOW_ISR   0x00001e    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                     main   0x000034    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       L2   0x000042    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       L3   0x00005c    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       L4   0x000064    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                   QDELAY   0x000070    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       D1   0x000074    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       D2   0x000078    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                    SPEED   0x000086    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       Z1   0x00008a    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                       Z2   0x00008e    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+               STARTMOTOR   0x00009c    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+                   DATAEE   0xf00000    program     static D:\All\Freelancing\my work done\loading bay project  mplab& Proteus full\loading bay\design.asm
+
+
