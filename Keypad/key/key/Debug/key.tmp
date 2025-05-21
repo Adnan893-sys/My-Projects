@@ -1,0 +1,47 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega32A"</DEVICE>
+ <WORKING_DIR>C:\Users\GH2\Videos\m\Keypad\key\key\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m32Adef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\GH2\Videos\m\Keypad\key\key\Debug\key.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>key.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>key.map</FILE>
+  <FILE>key.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <reset><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>15</LINE></reset>
+  <start><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>19</LINE></start>
+  <Init><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>31</LINE></Init>
+  <loop><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>23</LINE></loop>
+  <ReadKP><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>41</LINE></ReadKP>
+  <Display><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>126</LINE></Display>
+  <WAIT_FOR_RELEASE><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>45</LINE></WAIT_FOR_RELEASE>
+  <WAIT_FOR_KEY><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>52</LINE></WAIT_FOR_KEY>
+  <Delay><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>131</LINE></Delay>
+  <COL1><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>96</LINE></COL1>
+  <COL2><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>100</LINE></COL2>
+  <COL3><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>104</LINE></COL3>
+  <COL4><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>108</LINE></COL4>
+  <KCODE0><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>152</LINE></KCODE0>
+  <FIND><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>113</LINE></FIND>
+  <KCODE1><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>153</LINE></KCODE1>
+  <KCODE2><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>154</LINE></KCODE2>
+  <KCODE3><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>155</LINE></KCODE3>
+  <MATCH><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>119</LINE></MATCH>
+  <H2><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>137</LINE></H2>
+  <H1><FILE>C:\Users\GH2\Videos\m\Keypad\key\key\main.asm</FILE><LINE>139</LINE></H1>
+ </LABELS>
+</ASSEMBLER_INFO>
